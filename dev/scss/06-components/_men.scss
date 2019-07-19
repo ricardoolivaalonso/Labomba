@@ -1,0 +1,48 @@
+.men{
+    &__background{
+        width: 100%;
+        height: 30vmax;
+        background-image: url("../img/men.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @media(min-width: $mq1){
+            width: 50%;
+            height: 600px;
+        }
+    }
+    &__info{
+        @include flex(flex, center, center, column, wrap);
+        width: 100%;
+        height: 70vmax;
+        padding: $gap;
+        margin-bottom: $gap;
+        @media(min-width: $mq1){
+            width: 50%;
+            height: 600px;
+        }
+    }
+    &__info-generic{
+        @include flex(flex, center, center, column, wrap);
+        width: 100%;
+        @media(min-width: $mq1){
+            width: 330px;
+        }
+    }
+        &__title{
+            line-height: 2.5;
+            border-bottom: 1px solid $gray-50;
+            margin-bottom: 30px;
+            font-size: 32px;
+
+            @media(min-width: $mq1){
+                font-size: 48px;
+            }
+        }
+        &__description{
+            font-size: 13px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            text-align: center;
+        }
+}

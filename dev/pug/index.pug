@@ -1,0 +1,35 @@
+doctype html
+html(lang="es", dir="ltr")
+    head
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(charset="utf-8")     
+        meta(name="author", content="Ricardo Oliva Alonso")
+        meta(name="title", content="Ricardo Oliva Alonso | Desarrollador Web | .LABOMBA")
+        meta(name="description", content="Hola soy desarrollador web y esta página esta basada en .LABOMBA")
+        meta(name="robots", content="index, follow")
+        title Ricardo Oliva Alonso | Desarrollador Web | .LABOMBA
+           
+        meta(name="theme-color", content="#121212")      
+        link(rel="stylesheet", href="css/styles.css")  
+        link(href="img/favicon.png", rel="shorcut icon", type="image/x-icon")
+        link(href="https://fonts.googleapis.com/css?family=Playfair+Display", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap", rel="stylesheet")
+
+    body
+        //-********** MAIN CONTAINER **********
+        div.main
+            include header.pug
+            include banner.pug
+            include men.pug
+            include women.pug
+            include news.pug
+            include sacareno.pug
+            include map.pug
+            include footer.pug
+          
+        script( src="js/main.js", defer)
+    
+
+
+
+    

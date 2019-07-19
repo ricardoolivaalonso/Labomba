@@ -1,0 +1,38 @@
+.banner{
+    &__item{
+        @include flex(flex, center, center, row, wrap);
+
+        @media(min-width: $mq1){
+            width: 100%;
+            max-width: $container;
+        }
+    }
+    &__title{
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 32px;
+        text-align: center;
+        line-height: normal;
+        color: $white;
+        font-weight: lighter;
+
+        @media(min-width: $mq1){
+            font-size: 48px;
+            letter-spacing: 15px;
+        }
+    }
+    &__description{
+        width: 100%;
+        margin-top: $gap / 2;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.6;
+        letter-spacing: .25px;
+        color: $white;
+        background: $black;
+
+        @media(min-width: $mq1){
+            width: 45%;
+        }
+    }
+}

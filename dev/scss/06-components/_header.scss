@@ -1,0 +1,120 @@
+.profile,
+.header__title,
+.menu,
+.contact{ width: 100%; }
+
+.profile{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 10px $gap;
+    border-bottom: 1px solid $gray-50;
+    background: $white;
+    @media(min-width: $mq1){
+        border-bottom: none;
+    }
+    &__generic{
+        @include flex(flex, space-between, center, row, nowrap);
+        width: 100%;
+        max-width: $container;
+        margin: 0 auto;
+        @media(min-width: $mq1){
+            justify-content: flex-end;
+            height: $gap;
+        }
+    }
+    &__item{
+        @media(min-width: $mq1){
+            padding-left: $gap;
+            order: 2;
+        }
+    }
+    &__icon{
+        height: 30px;
+        object-fit: contain;
+        @media(min-width: $mq1){ height: 20px; }
+    }
+
+    &__title{
+        @media(min-width: $mq1){
+            order: 1;
+            width: 100%;
+        }
+    }
+}
+.header{
+    &__title{
+        text-align: center;
+        font-size: 42px;
+        margin-top: 30px;
+    }
+    &__trigger{
+        height: 30px;
+        object-fit: contain;
+        @media(min-width: $mq1){
+            display: none;
+        }
+    }
+}
+.menu{
+    display: none;
+    @media(min-width: $mq1){
+        display: inherit;
+    }
+    &__list{
+        @include flex(flex, center, flex-start, column, wrap);
+        height: auto;
+        padding-left: $gap;
+        @media(min-width: $mq1){
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            height: 40px;
+            border-bottom: 1px solid $gray-50;
+            padding: 0;
+            width: 100%;
+            max-width: $container;
+            margin: 0 auto;
+        }
+    }
+    &__link{
+        line-height: 2.5;
+        font-size: 11px;
+        color: $black;
+        letter-spacing: .5px;
+        &:hover{ text-decoration: line-through;}
+
+        @media(min-width: $mq1){
+            padding: 0 $gap / 2;
+            line-height: 1;
+        }
+    }
+}
+.contact{
+    height: $gap;
+    visibility: hidden;
+
+    @media(min-width: $mq1){
+        @include flex(flex, center, center, row, nowrap);
+        visibility: visible;
+        height: 100px;
+    }
+    &__link{
+        font-size: 12px;
+        // font-weight: bold;
+    }
+    &__item{
+        width: calc( #{$container} / 3);
+        @include flex(flex, center, center, column, wrap);
+        &:hover{ cursor: pointer}
+    }
+    &__description{
+        font-style: italic;
+        font-size: 12px;
+        line-height: 2;
+        font-family: 'Playfair Display', serif;
+    }
+}

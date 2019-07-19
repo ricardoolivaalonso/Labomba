@@ -1,0 +1,39 @@
+.trending{
+    @include flex(flex, space-between, flex-start, column, wrap);
+    width: 100%;
+    margin-bottom: $gap;
+
+	@media(min-width: $mq1){
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: $container;
+	}
+    &__list{
+        @include flex(flex, flex-start, flex-start, column, wrap);
+        margin-bottom: $gap / 2;
+    	@media(min-width: $mq1){ margin-bottom: 0; }
+    }
+    &__link{
+        line-height: 2.5;
+        border-bottom: 1px solid $gray-50;
+        font-size: 12px;
+        &--title{
+            color: $black;
+            font-size: 12px;
+            font-weight: bold;
+            border-bottom: none;
+        }
+    }
+}
+
+.terms{
+    width: 100%;
+    max-width: $container;
+    &__link{
+        width: $container;
+        text-align: left;
+        font-size: 12px;
+        color: $black;
+        font-weight: bold;
+    }
+}

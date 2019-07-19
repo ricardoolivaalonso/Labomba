@@ -1,0 +1,32 @@
+.news{
+    &__img{
+        height: 250px;
+        object-fit: contain;
+    }
+    &__info{
+        width: 100%;
+        padding-top: $gap;
+        @media(min-width: $mq1){
+            width: 450px;
+            padding-top: 0;
+            padding-left: $gap;
+        }
+    }
+        &__title{
+            color: $white;
+            line-height: 1;
+            font-size: 32px;
+            margin-bottom: $gap;
+            text-align: center;
+            @media(min-width: $mq1){ text-align: left; }
+        }
+        &__description{
+            width: 100%;
+            line-height: 1.6;
+            font-size: 11px;
+            color: $white;
+            letter-spacing: 1px;
+            text-align: center;
+            @media(min-width: $mq1){ text-align: left; }
+        }
+}

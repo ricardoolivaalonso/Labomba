@@ -1,0 +1,14 @@
+.header-shadow{
+    box-shadow: 0px 0px 5px $gray;
+    transition: 1s ease;
+}
+.is-hide{
+    display: none;
+}
+.is-show{
+    display: inherit;
+}
+@keyframes width {
+    0%{width: 0%}
+    100%{width: 100%}
+}

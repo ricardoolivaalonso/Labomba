@@ -1,0 +1,20 @@
+.sacareno{
+    &__generic{
+        @include flex(flex, center, center, column, wrap);
+        width: 100%;
+        padding: $gap;
+        @media(min-width: $mq2){ width: $container; }
+    }
+    &__title{
+        font-size: 32px;
+        @media(min-width: $mq1){
+            font-size: 48px;
+        }
+    }
+    &__description{
+        margin-bottom: $gap;
+        line-height: 1.8;
+        font-size: 12px;
+        text-align: center;
+    }
+}

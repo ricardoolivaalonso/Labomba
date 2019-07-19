@@ -1,0 +1,86 @@
+.main{
+    max-width: $max-width;
+    margin: 0 auto;
+}
+.header{
+    @include flex(flex, flex-start, center, column, wrap);
+    width: 100%;
+    height: auto;
+}
+.banner{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    height: 100vmax;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: $gap;
+
+    @media(min-width: $mq1){
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 650px;
+    }
+}
+.men,
+.women{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    height: auto;
+
+    @media(min-width: $mq1){
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 600px;
+    }
+}
+.women{
+    @include flex(flex, center, center, column-reverse ,wrap);
+
+    @media(min-width: $mq1){
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+.news{
+    @include flex(flex, center, center, column, nowrap);
+    width: 100%;
+    height: auto;
+    background-image: url("../img/news.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: $gap;
+    background-attachment: fixed;
+
+    @media(min-width: $mq2){
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 500px;
+        padding: 0;
+
+    }
+}
+.sacareno{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    height: 500px;
+}
+.map{
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.footer{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    padding: $gap;
+    background: lighten($gray-50, 12);
+}

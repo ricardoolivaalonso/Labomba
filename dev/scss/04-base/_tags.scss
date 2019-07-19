@@ -1,0 +1,25 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: $gray;
+    background: $white;
+}
+h1,
+h2,
+h3{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 9px;
+    line-height: 3;
+    color: $black;
+    font-size: 48px;
+    text-shadow: 0px 0px 1px $gray;
+}
+h3{
+    line-height: 1;
+    font-size: 14px;
+}
+ul{ list-style: none; }
+a{
+    color: $gray;
+    text-decoration: none;
+}
